@@ -46,7 +46,22 @@ SOURCES += ddicodebook.cpp \
     geogcover.cpp \
     anlyunit.cpp \
     universe.cpp \
-    datakind.cpp
+    datakind.cpp \
+    method.cpp \
+    datacoll.cpp \
+    timemeth.cpp \
+    datacollector.cpp \
+    sampproc.cpp \
+    collmode.cpp \
+    sources.cpp \
+    weight.cpp \
+    cleanops.cpp \
+    dataaccs.cpp \
+    setavail.cpp \
+    collsize.cpp \
+    fileqnty.cpp \
+    usestmt.cpp \
+    restrctn.cpp
 
 HEADERS += ddicodebook.h \
     docdscr.h \
@@ -85,7 +100,22 @@ HEADERS += ddicodebook.h \
     geogcover.h \
     anlyunit.h \
     universe.h \
-    datakind.h
+    datakind.h \
+    method.h \
+    datacoll.h \
+    timemeth.h \
+    datacollector.h \
+    sampproc.h \
+    collmode.h \
+    sources.h \
+    weight.h \
+    cleanops.h \
+    dataaccs.h \
+    setavail.h \
+    collsize.h \
+    fileqnty.h \
+    usestmt.h \
+    restrctn.h
 unix {
     target.path = /usr/lib
     INSTALLS += target

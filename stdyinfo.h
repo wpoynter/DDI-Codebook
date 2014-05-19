@@ -7,6 +7,7 @@
 #include "subject.h"
 #include "abstract.h"
 #include "sumdscr.h"
+#include "notes.h"
 
 namespace DDICodebook {
 
@@ -14,9 +15,10 @@ class StdyInfo : public DDIEntity
 {
 private:
     //Children
-    Subject *subject;
-    std::list<Abstract*> abstract;
-    std::list<SumDscr*> sumDscr;
+    Subject *subject;                               //Optional
+    std::list<Abstract*> abstract;                  //Optional
+    std::list<SumDscr*> sumDscr;                    //Optional
+    std::list<Notes*> notes;                        //Optional
 public:
     StdyInfo(std::string _ID);
 };
