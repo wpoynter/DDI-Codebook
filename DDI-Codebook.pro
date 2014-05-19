@@ -40,7 +40,13 @@ SOURCES += ddicodebook.cpp \
     keyword.cpp \
     abstract.cpp \
     sumdscr.cpp \
-    timeprd.cpp
+    timeprd.cpp \
+    colldate.cpp \
+    nation.cpp \
+    geogcover.cpp \
+    anlyunit.cpp \
+    universe.cpp \
+    datakind.cpp
 
 HEADERS += ddicodebook.h \
     docdscr.h \
@@ -73,7 +79,13 @@ HEADERS += ddicodebook.h \
     keyword.h \
     abstract.h \
     sumdscr.h \
-    timeprd.h
+    timeprd.h \
+    colldate.h \
+    nation.h \
+    geogcover.h \
+    anlyunit.h \
+    universe.h \
+    datakind.h
 unix {
     target.path = /usr/lib
     INSTALLS += target
