@@ -6,6 +6,8 @@
 #include "docdscr.h"
 #include "stdydscr.h"
 #include "filedscr.h"
+#include "datadscr.h"
+#include "othermat.h"
 
 namespace DDICodebook {
 
@@ -15,6 +17,8 @@ private:
     std::list<DocDscr*> docDscr;                //Optional
     std::list<StdyDscr*> stdyDscr;              //Required
     std::list<FileDscr*> fileDscr;              //Optional
+    std::list<DataDscr*> dataDscr;              //Optional
+    std::list<OtherMat*> otherMat;              //Optional
 public:
     Codebook();
 };

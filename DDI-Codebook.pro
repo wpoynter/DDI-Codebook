@@ -71,7 +71,29 @@ SOURCES += \
     varqnty.cpp \
     logrecl.cpp \
     recprcas.cpp \
-    filetype.cpp
+    filetype.cpp \
+    datadscr.cpp \
+    vargrp.cpp \
+    labl.cpp \
+    var.cpp \
+    location.cpp \
+    qstn.cpp \
+    qstnlit.cpp \
+    invalrng.cpp \
+    range.cpp \
+    item.cpp \
+    sumstat.cpp \
+    txt.cpp \
+    catgrygrp.cpp \
+    catstat.cpp \
+    catgry.cpp \
+    catvalu.cpp \
+    concept.cpp \
+    derivation.cpp \
+    drvdesc.cpp \
+    varformat.cpp \
+    othermat.cpp \
+    table.cpp
 
 HEADERS += \
     docdscr.h \
@@ -135,7 +157,29 @@ HEADERS += \
     varqnty.h \
     logrecl.h \
     recprcas.h \
-    filetype.h
+    filetype.h \
+    datadscr.h \
+    vargrp.h \
+    labl.h \
+    var.h \
+    location.h \
+    qstn.h \
+    qstnlit.h \
+    invalrng.h \
+    range.h \
+    item.h \
+    sumstat.h \
+    txt.h \
+    catgrygrp.h \
+    catstat.h \
+    catgry.h \
+    catvalu.h \
+    concept.h \
+    derivation.h \
+    drvdesc.h \
+    varformat.h \
+    othermat.h \
+    table.h
 unix {
     target.path = /usr/lib
     INSTALLS += target
