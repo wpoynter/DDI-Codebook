@@ -10,7 +10,7 @@ TARGET = DDI-Codebook
 TEMPLATE = lib
 CONFIG += staticlib
 
-SOURCES += ddicodebook.cpp \
+SOURCES += \
     docdscr.cpp \
     citation.cpp \
     titlestmt.cpp \
@@ -61,9 +61,19 @@ SOURCES += ddicodebook.cpp \
     collsize.cpp \
     fileqnty.cpp \
     usestmt.cpp \
-    restrctn.cpp
+    restrctn.cpp \
+    filedscr.cpp \
+    codebook.cpp \
+    filetxt.cpp \
+    filename.cpp \
+    dimensns.cpp \
+    caseqnty.cpp \
+    varqnty.cpp \
+    logrecl.cpp \
+    recprcas.cpp \
+    filetype.cpp
 
-HEADERS += ddicodebook.h \
+HEADERS += \
     docdscr.h \
     ddientity.h \
     citation.h \
@@ -115,7 +125,17 @@ HEADERS += ddicodebook.h \
     collsize.h \
     fileqnty.h \
     usestmt.h \
-    restrctn.h
+    restrctn.h \
+    filedscr.h \
+    codebook.h \
+    filetxt.h \
+    filename.h \
+    dimensns.h \
+    caseqnty.h \
+    varqnty.h \
+    logrecl.h \
+    recprcas.h \
+    filetype.h
 unix {
     target.path = /usr/lib
     INSTALLS += target
