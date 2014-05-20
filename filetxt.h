@@ -6,7 +6,7 @@
 #include "dimensns.h"
 #include "filetype.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class FileTxt : public DDIEntity
 {

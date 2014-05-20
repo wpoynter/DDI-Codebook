@@ -2,6 +2,7 @@
 #define CODEBOOK_H
 
 #include <list>
+#include <iostream>
 
 #include "docdscr.h"
 #include "stdydscr.h"
@@ -9,7 +10,7 @@
 #include "datadscr.h"
 #include "othermat.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class Codebook
 {
@@ -21,6 +22,9 @@ private:
     std::list<OtherMat*> otherMat;              //Optional
 public:
     Codebook();
+    Codebook(std::istream &is);
+    void read(std::istream &is);
+    void write(std::ostream &os);
 };
 
 }

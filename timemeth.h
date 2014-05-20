@@ -3,7 +3,7 @@
 
 #include "ddientity.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class TimeMeth : public DDIEntity
 {

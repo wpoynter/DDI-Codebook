@@ -1,6 +1,6 @@
 #include "nation.h"
 
-DDICodebook::Nation::Nation(std::string _ID = "")
+DDI::Nation::Nation(std::string _ID = "")
 {
     ID = _ID;
 }

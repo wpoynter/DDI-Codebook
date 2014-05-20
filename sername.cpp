@@ -1,6 +1,6 @@
 #include "sername.h"
 
-DDICodebook::SerName::SerName(std::string _ID = "")
+DDI::SerName::SerName(std::string _ID = "")
 {
     ID = _ID;
 }

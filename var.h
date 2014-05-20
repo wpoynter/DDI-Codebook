@@ -18,7 +18,7 @@
 #include "varformat.h"
 #include "notes.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class Var : public DDIEntity
 {

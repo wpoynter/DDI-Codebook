@@ -7,7 +7,7 @@
 #include "setavail.h"
 #include "usestmt.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class DataAccs : public DDIEntity
 {

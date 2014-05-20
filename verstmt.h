@@ -7,7 +7,7 @@
 #include "version.h"
 #include "notes.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class VerStmt : public DDIEntity
 {

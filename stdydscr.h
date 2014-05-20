@@ -10,7 +10,7 @@
 #include "dataaccs.h"
 #include "notes.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class StdyDscr : public DDIEntity
 {

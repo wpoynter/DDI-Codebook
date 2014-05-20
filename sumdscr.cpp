@@ -1,6 +1,6 @@
 #include "sumdscr.h"
 
-DDICodebook::SumDscr::SumDscr(std::string _ID = "")
+DDI::SumDscr::SumDscr(std::string _ID = "")
 {
     ID = _ID;
 }

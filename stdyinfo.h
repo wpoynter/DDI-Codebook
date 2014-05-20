@@ -9,7 +9,7 @@
 #include "sumdscr.h"
 #include "notes.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class StdyInfo : public DDIEntity
 {

@@ -1,6 +1,6 @@
 #include "catvalu.h"
 
-DDICodebook::CatValu::CatValu(std::string _ID = "")
+DDI::CatValu::CatValu(std::string _ID = "")
 {
     ID = _ID;
 }

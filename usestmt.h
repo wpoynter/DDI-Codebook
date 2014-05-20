@@ -4,7 +4,7 @@
 #include "ddientity.h"
 #include "restrctn.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class UseStmt : public DDIEntity
 {

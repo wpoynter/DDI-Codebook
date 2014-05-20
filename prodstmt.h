@@ -10,7 +10,7 @@
 #include "software.h"
 #include "fundag.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class ProdStmt : public DDIEntity
 {

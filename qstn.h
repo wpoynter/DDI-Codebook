@@ -6,7 +6,7 @@
 #include "ddientity.h"
 #include "qstnlit.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class Qstn : public DDIEntity
 {

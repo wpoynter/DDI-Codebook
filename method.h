@@ -7,7 +7,7 @@
 #include "datacoll.h"
 #include "notes.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class Method : public DDIEntity
 {

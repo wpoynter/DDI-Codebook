@@ -7,7 +7,7 @@
 #include "filetxt.h"
 #include "notes.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class FileDscr : public DDIEntity
 {

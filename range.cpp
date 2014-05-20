@@ -1,6 +1,6 @@
 #include "range.h"
 
-DDICodebook::Range::Range(std::string _ID = "")
+DDI::Range::Range(std::string _ID = "")
 {
     ID = _ID;
 }

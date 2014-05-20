@@ -5,7 +5,7 @@
 
 #include "ddientity.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class Version : public DDIEntity
 {

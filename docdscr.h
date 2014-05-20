@@ -7,7 +7,7 @@
 #include "citation.h"
 #include "notes.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class DocDscr : public DDIEntity
 {

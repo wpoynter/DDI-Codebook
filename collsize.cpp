@@ -1,6 +1,6 @@
 #include "collsize.h"
 
-DDICodebook::CollSize::CollSize(std::string _ID = "")
+DDI::CollSize::CollSize(std::string _ID = "")
 {
     ID = _ID;
 }

@@ -8,7 +8,7 @@
 #include "item.h"
 #include "notes.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class Invalrng : public DDIEntity
 {

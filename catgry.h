@@ -9,7 +9,7 @@
 #include "txt.h"
 #include "catstat.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class Catgry : public DDIEntity
 {

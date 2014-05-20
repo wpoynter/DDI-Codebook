@@ -5,7 +5,7 @@
 
 #include "ddientity.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class ProdDate : public DDIEntity
 {

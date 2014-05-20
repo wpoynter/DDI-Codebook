@@ -7,7 +7,7 @@
 #include "labl.h"
 #include "catstat.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class CatgryGrp : public DDIEntity
 {

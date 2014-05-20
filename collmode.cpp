@@ -1,6 +1,6 @@
 #include "collmode.h"
 
-DDICodebook::CollMode::CollMode(std::string _ID = "")
+DDI::CollMode::CollMode(std::string _ID = "")
 {
     ID = _ID;
 }

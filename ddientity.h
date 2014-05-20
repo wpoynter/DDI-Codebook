@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace DDICodebook {
+namespace DDI {
 
 class DDIEntity
 {

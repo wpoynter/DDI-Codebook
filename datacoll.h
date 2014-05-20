@@ -12,7 +12,7 @@
 #include "weight.h"
 #include "cleanops.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class DataColl : public DDIEntity
 {

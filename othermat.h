@@ -10,7 +10,7 @@
 #include "table.h"
 #include "citation.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class OtherMat : public DDIEntity
 {

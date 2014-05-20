@@ -3,7 +3,7 @@
 
 #include "ddientity.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class FileName : public DDIEntity
 {

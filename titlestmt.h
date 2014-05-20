@@ -7,7 +7,7 @@
 #include "titl.h"
 #include "idno.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class TitleStmt : public DDIEntity
 {

@@ -1,6 +1,6 @@
 #include "concept.h"
 
-DDICodebook::Concept::Concept(std::string _ID = "")
+DDI::Concept::Concept(std::string _ID = "")
 {
     ID = _ID;
 }

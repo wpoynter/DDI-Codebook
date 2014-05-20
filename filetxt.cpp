@@ -1,6 +1,6 @@
 #include "filetxt.h"
 
-DDICodebook::FileTxt::FileTxt(std::string _ID = "")
+DDI::FileTxt::FileTxt(std::string _ID = "")
 {
     ID = _ID;
 }

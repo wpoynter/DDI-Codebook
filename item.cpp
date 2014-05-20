@@ -1,6 +1,6 @@
 #include "item.h"
 
-DDICodebook::Item::Item(std::string _ID = "")
+DDI::Item::Item(std::string _ID = "")
 {
     ID = _ID;
 }

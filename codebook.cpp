@@ -1,5 +1,5 @@
 #include "codebook.h"
 
-DDICodebook::Codebook::Codebook()
+DDI::Codebook::Codebook()
 {
 }

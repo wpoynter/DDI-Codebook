@@ -3,7 +3,7 @@
 
 #include "ddientity.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class OthId : public DDIEntity
 {

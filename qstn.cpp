@@ -1,6 +1,6 @@
 #include "qstn.h"
 
-DDICodebook::Qstn::Qstn(std::string _ID = "")
+DDI::Qstn::Qstn(std::string _ID = "")
 {
     ID = _ID;
 }

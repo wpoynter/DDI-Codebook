@@ -6,7 +6,7 @@
 #include "ddientity.h"
 #include "labl.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class VarGrp : public DDIEntity
 {

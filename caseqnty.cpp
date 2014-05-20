@@ -1,6 +1,6 @@
 #include "caseqnty.h"
 
-DDICodebook::CaseQnty::CaseQnty(std::string _ID = "")
+DDI::CaseQnty::CaseQnty(std::string _ID = "")
 {
     ID = _ID;
 }

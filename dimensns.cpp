@@ -1,6 +1,6 @@
 #include "dimensns.h"
 
-DDICodebook::Dimensns::Dimensns(std::string _ID = "")
+DDI::Dimensns::Dimensns(std::string _ID = "")
 {
     ID = _ID;
 }

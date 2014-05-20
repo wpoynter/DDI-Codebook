@@ -1,6 +1,6 @@
 #include "filename.h"
 
-DDICodebook::FileName::FileName(std::string _ID = "")
+DDI::FileName::FileName(std::string _ID = "")
 {
     ID = _ID;
 }

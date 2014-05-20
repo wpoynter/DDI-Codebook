@@ -9,6 +9,7 @@ QT       -= core gui
 TARGET = DDI-Codebook
 TEMPLATE = lib
 CONFIG += staticlib
+INCLUDEPATH +=  N:\CLOSER\Code\lib
 
 SOURCES += \
     docdscr.cpp \
@@ -93,7 +94,8 @@ SOURCES += \
     drvdesc.cpp \
     varformat.cpp \
     othermat.cpp \
-    table.cpp
+    table.cpp \
+    reader.cpp
 
 HEADERS += \
     docdscr.h \
@@ -179,7 +181,10 @@ HEADERS += \
     drvdesc.h \
     varformat.h \
     othermat.h \
-    table.h
+    table.h \
+    N:/CLOSER/Code/lib/rapidxml-1.13/rapidxml.hpp \
+    N:/CLOSER/Code/lib/rapidxml-1.13/rapidxml_utils.hpp \
+    reader.h
 unix {
     target.path = /usr/lib
     INSTALLS += target

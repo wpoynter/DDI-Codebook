@@ -6,7 +6,7 @@
 #include "ddientity.h"
 #include "keyword.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class Subject : public DDIEntity
 {

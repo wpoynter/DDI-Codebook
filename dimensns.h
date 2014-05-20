@@ -9,7 +9,7 @@
 #include "logrecl.h"
 #include "recprcas.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class Dimensns : public DDIEntity
 {

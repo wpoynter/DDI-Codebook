@@ -12,7 +12,7 @@
 #include "universe.h"
 #include "datakind.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class SumDscr : public DDIEntity
 {

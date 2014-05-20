@@ -1,6 +1,6 @@
 #include "cleanops.h"
 
-DDICodebook::CleanOps::CleanOps(std::string _ID = "")
+DDI::CleanOps::CleanOps(std::string _ID = "")
 {
     ID = _ID;
 }

@@ -7,7 +7,7 @@
 #include "vargrp.h"
 #include "var.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class DataDscr : public DDIEntity
 {

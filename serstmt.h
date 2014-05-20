@@ -4,7 +4,7 @@
 #include "ddientity.h"
 #include "sername.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class SerStmt : public DDIEntity
 {

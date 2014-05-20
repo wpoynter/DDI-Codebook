@@ -4,7 +4,7 @@
 #include "ddientity.h"
 #include "drvdesc.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class Derivation : public DDIEntity
 {

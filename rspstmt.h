@@ -7,7 +7,7 @@
 #include "authentry.h"
 #include "othid.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class RspStmt : public DDIEntity
 {

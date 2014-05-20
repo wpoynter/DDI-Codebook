@@ -5,7 +5,7 @@
 #include "collsize.h"
 #include "fileqnty.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class SetAvail : public DDIEntity
 {

@@ -12,7 +12,7 @@
 #include "serstmt.h"
 #include "biblcit.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class Citation : public DDIEntity
 {

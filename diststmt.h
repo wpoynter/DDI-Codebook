@@ -7,7 +7,7 @@
 #include "distrbtr.h"
 #include "distdate.h"
 
-namespace DDICodebook {
+namespace DDI {
 
 class DistStmt : public DDIEntity
 {
