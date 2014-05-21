@@ -12,7 +12,7 @@ DDI::DocDscr::DocDscr(rapidxml::xml_node<> *_node)
     readNode(_node);
 }
 
-std::string DDI::DocDscr::getXMLLang() {
+std::string DDI::DocDscr::getXMLLabel() {
     return _label_;
 }
 

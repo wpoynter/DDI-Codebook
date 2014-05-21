@@ -13,7 +13,7 @@ DDI::Citation::Citation(rapidxml::xml_node<> *_node)
     readNode(_node);
 }
 
-std::string DDI::Citation::getXMLLang() {
+std::string DDI::Citation::getXMLLabel() {
     return _label_;
 }
 

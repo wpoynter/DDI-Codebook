@@ -12,7 +12,7 @@ DDI::Titl::Titl(rapidxml::xml_node<> *_node)
     readNode(_node);
 }
 
-std::string DDI::Titl::getXMLLang() {
+std::string DDI::Titl::getXMLLabel() {
     return _label_;
 }
 

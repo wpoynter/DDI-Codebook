@@ -12,7 +12,7 @@ DDI::TitleStmt::TitleStmt(rapidxml::xml_node<> *_node)
     readNode(_node);
 }
 
-std::string DDI::TitleStmt::getXMLLang() {
+std::string DDI::TitleStmt::getXMLLabel() {
     return _label_;
 }
 
