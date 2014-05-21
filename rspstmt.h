@@ -12,10 +12,16 @@ namespace DDI {
 class RspStmt : public DDIEntity
 {
 private:
+    //Children
     std::list<AuthEntry*> authEntry;
     std::list<OthId*> othId;
 public:
-    RspStmt(std::string _ID);
+    RspStmt(std::string _ID = "");
+    RspStmt(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLang();
 };
 
 }

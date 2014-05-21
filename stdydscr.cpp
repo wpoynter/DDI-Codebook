@@ -1,6 +1,12 @@
 #include "stdydscr.h"
 
-DDI::StdyDscr::StdyDscr(std::string _ID = "")
+const std::string DDI::StdyDscr::_label_ = "stdyDscr";
+
+DDI::StdyDscr::StdyDscr(std::string _ID)
 {
     ID = _ID;
+}
+
+std::string DDI::StdyDscr::getXMLLang() {
+    return _label_;
 }

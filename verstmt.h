@@ -16,7 +16,12 @@ private:
     Version *version;
     std::list<Notes*> notes;
 public:
-    VerStmt(std::string _ID);
+    VerStmt(std::string _ID = "");
+    VerStmt(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLang();
 };
 
 }

@@ -8,7 +8,9 @@ namespace DDI {
 class Notes : public DDIEntity
 {
 public:
-    Notes(std::string _ID);
+    Notes(std::string _ID = "");
+
+    static const std::string _label_;
 };
 
 }

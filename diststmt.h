@@ -16,7 +16,12 @@ private:
     std::list<Distrbtr*> distrbtr;                  //Optional
     DistDate *distDate;                             //Optional
 public:
-    DistStmt(std::string _ID);
+    DistStmt(std::string _ID = "");
+    DistStmt(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLang();
 };
 
 }

@@ -12,9 +12,10 @@
 
 namespace DDI {
 
-class Codebook
+class Codebook : public DDIEntity
 {
 private:
+    //Children
     std::list<DocDscr*> docDscr;                //Optional
     std::list<StdyDscr*> stdyDscr;              //Required
     std::list<FileDscr*> fileDscr;              //Optional
@@ -23,8 +24,15 @@ private:
 public:
     Codebook();
     Codebook(std::istream &is);
-    void read(std::istream &is);
-    void write(std::ostream &os);
+
+    static const std::string _label_;
+
+    std::string getXMLLang();
+    void readAttribute(std::string _name, std::string _value);
+    void readNode(rapidxml::xml_node<> *_node);
+
+    //Test function
+    void test();
 };
 
 }

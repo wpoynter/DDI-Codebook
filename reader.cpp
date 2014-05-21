@@ -38,13 +38,13 @@ void DDI::Reader::read()
     std::cout << "Reading...\n";
     // Read data and append terminating 0
     stream.read(&buf.front(), static_cast<std::streamsize>(size));
-    buf.back() = 0;
+    buf[size] = 0;
 }
 
 void DDI::Reader::parse()
 {
     std::cout << "Parsing...\n";
     doc.parse<0>(&buf.front());
-    std::cout << "Testing...\n";
-    std::cout << "Name of my first node is: " << doc.first_node()->name() << "\n";
+    rapidxml::xml_node<> *n_codeBook = doc.first_node("codeBook");
+    codebook->readNode(n_codeBook);
 }

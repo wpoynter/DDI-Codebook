@@ -95,7 +95,8 @@ SOURCES += \
     varformat.cpp \
     othermat.cpp \
     table.cpp \
-    reader.cpp
+    reader.cpp \
+    ddientity.cpp
 
 HEADERS += \
     docdscr.h \

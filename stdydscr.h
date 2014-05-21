@@ -22,7 +22,10 @@ private:
     std::list<DataAccs*> dataAccs;                      //Optional
     std::list<Notes*> notes;                            //Optional
 public:
-    StdyDscr(std::string _ID);
+    StdyDscr(std::string _ID = "");
+    std::string getXMLLang();
+
+    static const std::string _label_;
 };
 
 }

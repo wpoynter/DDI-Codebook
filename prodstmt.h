@@ -24,7 +24,12 @@ private:
     std::list<Software*> software;              //Optional
     std::list<FundAg*> fundAg;                  //Optional
 public:
-    ProdStmt(std::string _ID);
+    ProdStmt(std::string _ID = "");
+    ProdStmt(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLang();
 };
 
 }

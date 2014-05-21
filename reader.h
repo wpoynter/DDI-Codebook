@@ -2,7 +2,7 @@
 #define READER_H
 
 #include <string>
-#include <list>
+#include <vector>
 #include <fstream>
 #include "rapidxml-1.13/rapidxml.hpp"
 
@@ -14,7 +14,7 @@ class Reader
 {
 private:
     std::string fileName;
-    std::list<char> buf;
+    std::vector<char> buf;
     size_t size;
     DDI::Codebook *codebook;
     bool prepared;

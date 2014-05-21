@@ -11,7 +11,12 @@ class SerStmt : public DDIEntity
 private:
     SerName *serName;
 public:
-    SerStmt(std::string _ID);
+    SerStmt(std::string _ID = "");
+    SerStmt(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLang();
 };
 
 }

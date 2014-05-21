@@ -18,7 +18,15 @@ private:
     Titl *titl;                             //Required
     std::list<IDNo*> idno;                  //Optional
 public:
-    TitleStmt(std::string _ID);
+    TitleStmt(std::string _ID = "");
+    TitleStmt(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLang();
+    void readNode(rapidxml::xml_node<> *_node);
+
+    Titl* getTitl();
 };
 
 }

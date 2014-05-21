@@ -8,7 +8,12 @@ namespace DDI {
 class BiblCit : public DDIEntity
 {
 public:
-    BiblCit(std::string _ID);
+    BiblCit(std::string _ID = "");
+    BiblCit(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLang();
 };
 
 }

@@ -30,7 +30,15 @@ private:
     SerStmt *serStmt;                   //Optional
     BiblCit *biblCit;                   //Optional
 public:
-    Citation(std::string _ID);
+    Citation(std::string _ID = "");
+    Citation(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLang();
+    void readNode(rapidxml::xml_node<> *_node);
+
+    TitleStmt* getTitlStmt();
 };
 
 }
