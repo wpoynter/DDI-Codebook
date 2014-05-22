@@ -9,6 +9,11 @@ class Copyright : public DDIEntity
 {
 public:
     Copyright(std::string _ID);
+    Copyright(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

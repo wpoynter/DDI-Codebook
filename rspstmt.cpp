@@ -12,6 +12,6 @@ DDI::RspStmt::RspStmt(rapidxml::xml_node<> *_node)
     readNode(_node);
 }
 
-std::string DDI::RspStmt::getXMLLang() {
+std::string DDI::RspStmt::getXMLLabel() {
     return _label_;
 }

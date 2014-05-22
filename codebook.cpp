@@ -16,23 +16,15 @@ void DDI::Codebook::test() {
     Titl *titl = titlStmt->getTitl();
     std::cout << titl->getXMLLabel() << std::endl;
     std::cout << titl->getContents() << std::endl;
-    std::cout << stdyDscr.front()->getXMLLang() << std::endl;
+    std::cout << stdyDscr.front()->getXMLLabel() << std::endl;
 }
 
 std::string DDI::Codebook::getXMLLang() {
     return _label_;
 }
 
-void DDI::Codebook::readAttribute(std::string _name, std::string _value) {
-    DDIEntity::readAttribute(_name, _value);
-}
-
 void DDI::Codebook::readNode(rapidxml::xml_node<> *_node) {
-    for (rapidxml::xml_attribute<> *attr = _node->first_attribute();
-         attr; attr = attr->next_attribute())
-    {
-        readAttribute(attr->name(), attr->value());
-    }
+    DDIEntity::readNode(_node);
     for (rapidxml::xml_node<> *node = _node->first_node();
          node; node = node->next_sibling())
     {

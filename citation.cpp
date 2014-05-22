@@ -17,13 +17,8 @@ std::string DDI::Citation::getXMLLabel() {
     return _label_;
 }
 
-
 void DDI::Citation::readNode(rapidxml::xml_node<> *_node) {
-    for (rapidxml::xml_attribute<> *attr = _node->first_attribute();
-         attr; attr = attr->next_attribute())
-    {
-        readAttribute(attr->name(), attr->value());
-    }
+    DDIEntity::readNode(_node);
     for (rapidxml::xml_node<> *node = _node->first_node();
          node; node = node->next_sibling())
     {

@@ -40,19 +40,27 @@ void DDI::DDIEntity::readNode(rapidxml::xml_node<> *_node) {
     for (rapidxml::xml_attribute<> *attr = _node->first_attribute();
          attr; attr = attr->next_attribute())
     {
-        readAttribute(attr->name(), attr->value());
+        if (!readAttribute(attr->name(), attr->value()))
+            std::cout << "Unrecognised attribute: " << attr->name() << " (" << attr->value() << ")" << std::endl;
     }
     _contents_ = _node->value();
 }
 
-void DDI::DDIEntity::readAttribute(std::string _name, std::string _value) {
+bool DDI::DDIEntity::readAttribute(std::string _name, std::string _value) {
     if (_name == "ID")
+    {
         ID = _value;
-    else if (_name == "xml-lang")
-        xml_lang = _value;
-    else if (_name == "source")
-        source = _value;
-    else {
-        //Throw warning
     }
+    else if (_name == "xml-lang")
+    {
+        xml_lang = _value;
+    }
+    else if (_name == "source")
+    {
+        source = _value;
+    }
+    else {
+        return false;
+    }
+    return true;
 }

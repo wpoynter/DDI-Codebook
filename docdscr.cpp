@@ -23,11 +23,11 @@ void DDI::DocDscr::readNode(rapidxml::xml_node<> *_node) {
     {
         if (node->name() == DDI::Citation::_label_)
         {
-            citation = new Citation();
+            citation = new Citation(node);
         }
         else if (node->name() == DDI::Notes::_label_)
         {
-            notes.push_back(new Notes());
+            notes.push_back(new Notes(node));
         }
         else
         {

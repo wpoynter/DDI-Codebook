@@ -21,7 +21,7 @@ public:
 
     static const std::string _label_;
 
-    std::string getXMLLang();
+    std::string getXMLLabel();
 };
 
 }

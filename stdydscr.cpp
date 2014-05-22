@@ -7,6 +7,6 @@ DDI::StdyDscr::StdyDscr(std::string _ID)
     ID = _ID;
 }
 
-std::string DDI::StdyDscr::getXMLLang() {
+std::string DDI::StdyDscr::getXMLLabel() {
     return _label_;
 }

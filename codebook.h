@@ -28,7 +28,6 @@ public:
     static const std::string _label_;
 
     std::string getXMLLang();
-    void readAttribute(std::string _name, std::string _value);
     void readNode(rapidxml::xml_node<> *_node);
 
     //Test function

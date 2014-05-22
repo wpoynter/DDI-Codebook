@@ -24,6 +24,9 @@ void DDI::TitleStmt::readNode(rapidxml::xml_node<> *_node) {
         if (node->name() == DDI::Titl::_label_)
         {
             titl = new Titl(node);
+        } else if (node->name() == DDI::IDNo::_label_)
+        {
+            idno.push_back(new IDNo(node));
         }
         else
         {

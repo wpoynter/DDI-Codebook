@@ -29,7 +29,8 @@ public:
 
     static const std::string _label_;
 
-    std::string getXMLLang();
+    std::string getXMLLabel();
+    void readNode(rapidxml::xml_node<> *_node);
 };
 
 }

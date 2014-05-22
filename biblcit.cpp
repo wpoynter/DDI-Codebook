@@ -12,6 +12,6 @@ DDI::BiblCit::BiblCit(rapidxml::xml_node<> *_node)
     readNode(_node);
 }
 
-std::string DDI::BiblCit::getXMLLang() {
+std::string DDI::BiblCit::getXMLLabel() {
     return _label_;
 }

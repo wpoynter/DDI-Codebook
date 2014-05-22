@@ -23,7 +23,7 @@ private:
     std::list<Notes*> notes;                            //Optional
 public:
     StdyDscr(std::string _ID = "");
-    std::string getXMLLang();
+    std::string getXMLLabel();
 
     static const std::string _label_;
 };

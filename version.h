@@ -1,9 +1,8 @@
 #ifndef VERSION_H
 #define VERSION_H
 
-#include <ctime>
-
 #include "ddientity.h"
+#include "date.h"
 
 namespace DDI {
 
@@ -11,9 +10,15 @@ class Version : public DDIEntity
 {
 private:
     //Attributes
-    time_t date;
+    DDI::Date date;
 public:
-    Version(std::string _ID);
+    Version(std::string _ID = "");
+    Version(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
+    bool readAttribute(std::string _name, std::string _value);
 };
 
 }

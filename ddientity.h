@@ -18,7 +18,7 @@ protected:
 public:
     virtual std::string getXMLLabel();
     virtual void readNode(rapidxml::xml_node<> *_node);
-    virtual void readAttribute(std::string _name, std::string _value);
+    virtual bool readAttribute(std::string _name, std::string _value);
 
     std::string getID();
     std::string getLang();

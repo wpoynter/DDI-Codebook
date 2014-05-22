@@ -96,7 +96,9 @@ SOURCES += \
     othermat.cpp \
     table.cpp \
     reader.cpp \
-    ddientity.cpp
+    ddientity.cpp \
+    date.cpp \
+    utils.cpp
 
 HEADERS += \
     docdscr.h \
@@ -185,7 +187,9 @@ HEADERS += \
     table.h \
     N:/CLOSER/Code/lib/rapidxml-1.13/rapidxml.hpp \
     N:/CLOSER/Code/lib/rapidxml-1.13/rapidxml_utils.hpp \
-    reader.h
+    reader.h \
+    date.h \
+    utils.h
 unix {
     target.path = /usr/lib
     INSTALLS += target
