@@ -12,8 +12,6 @@ namespace DDI {
 class DocDscr : public DDIEntity
 {
 private:
-    //Attributes
-
     //Children
     Citation *citation;                         //Optional
     std::list<Notes*> notes;                    //Optional

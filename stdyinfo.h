@@ -21,6 +21,11 @@ private:
     std::list<Notes*> notes;                        //Optional
 public:
     StdyInfo(std::string _ID);
+    StdyInfo(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

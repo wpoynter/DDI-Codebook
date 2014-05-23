@@ -1,5 +1,7 @@
 #include "utils.h"
 
+#include <sstream>
+
 std::vector<std::string> DDI::Utils::explode(std::string str, std::string delim)
 {
     size_t pos = 0;
@@ -27,10 +29,22 @@ std::vector<const char*> DDI::Utils::explode(const char *str, const char *delim)
 
 std::string DDI::Utils::implode(std::vector<std::string> str, std::string glue)
 {
-    return "";
+    std::stringstream ss;
+    for (std::vector<std::string>::iterator iter = str.begin(); iter != str.end(); iter++) {
+        ss << *iter << glue;
+    }
+    std::string output(ss.str());
+    output.erase(output.length()-glue.length());
+    return output;
 }
 
 const char *DDI::Utils::implode(std::vector<const char*> str, const char *glue)
 {
-    return "";
+    std::stringstream ss;
+    for (std::vector<const char*>::iterator iter = str.begin(); iter != str.end(); iter++) {
+        ss << *iter << glue;
+    }
+    std::string output(ss.str());
+    output.erase(output.length()-std::char_traits<char>::length(glue));
+    return output.c_str();
 }

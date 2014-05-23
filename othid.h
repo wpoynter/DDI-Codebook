@@ -9,6 +9,11 @@ class OthId : public DDIEntity
 {
 public:
     OthId(std::string _ID);
+    OthId(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

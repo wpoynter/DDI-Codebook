@@ -17,6 +17,11 @@ private:
     std::list<UseStmt*> useStmt;                    //Optional
 public:
     DataAccs(std::string _ID);
+    DataAccs(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

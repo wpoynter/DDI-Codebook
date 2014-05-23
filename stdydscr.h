@@ -23,9 +23,12 @@ private:
     std::list<Notes*> notes;                            //Optional
 public:
     StdyDscr(std::string _ID = "");
-    std::string getXMLLabel();
+    StdyDscr(rapidxml::xml_node<> *_node);
 
     static const std::string _label_;
+
+    std::string getXMLLabel();
+    void readNode(rapidxml::xml_node<> *_node);
 };
 
 }
