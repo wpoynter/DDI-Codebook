@@ -1,7 +1,7 @@
 #ifndef OTHERMAT_H
 #define OTHERMAT_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "labl.h"
@@ -18,10 +18,10 @@ private:
     //Attributes
     std::string URI;
     //Children
-    std::list<Labl*> labl;                          //Optional
+    std::vector<Labl*> labl;                          //Optional
     Txt *txt;                                       //Optional
-    std::list<Notes*> notes;                        //Optional
-    std::list<Table*> table;                        //Optional
+    std::vector<Notes*> notes;                        //Optional
+    std::vector<Table*> table;                        //Optional
     Citation *citation;                             //Optional
 public:
     OtherMat(std::string _ID);

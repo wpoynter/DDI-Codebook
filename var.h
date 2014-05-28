@@ -1,7 +1,7 @@
 #ifndef VAR_H
 #define VAR_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "location.h"
@@ -29,19 +29,19 @@ private:
     std::string dcml;
     std::string intrvl;
     //Children
-    std::list<Location*> location;                      //Optional
-    std::list<Labl*> labl;                              //Optional
-    std::list<Qstn*> qstn;                              //Optional
-    std::list<Invalrng*> invalrng;                      //Optional
-    std::list<Universe*> universe;                      //Optional
-    std::list<SumStat*> sumStat;                        //Optional
-    std::list<Txt*> txt;                                //Optional
-    std::list<CatgryGrp*> catgryGrp;                    //Optional
-    std::list<Catgry*> catgry;                          //Optional
-    std::list<Concept*> concept;                        //Optional
+    std::vector<Location*> location;                      //Optional
+    std::vector<Labl*> labl;                              //Optional
+    std::vector<Qstn*> qstn;                              //Optional
+    std::vector<Invalrng*> invalrng;                      //Optional
+    std::vector<Universe*> universe;                      //Optional
+    std::vector<SumStat*> sumStat;                        //Optional
+    std::vector<Txt*> txt;                                //Optional
+    std::vector<CatgryGrp*> catgryGrp;                    //Optional
+    std::vector<Catgry*> catgry;                          //Optional
+    std::vector<Concept*> concept;                        //Optional
     Derivation *derivation;                             //Optional
     VarFormat *varFormat;                               //Optional
-    std::list<Notes*> notes;                            //Optional
+    std::vector<Notes*> notes;                            //Optional
 public:
     Var(std::string _ID);
 };

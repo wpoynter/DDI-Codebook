@@ -1,7 +1,7 @@
 #ifndef SUMDSCR_H
 #define SUMDSCR_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "timeprd.h"
@@ -18,13 +18,13 @@ class SumDscr : public DDIEntity
 {
 private:
     //Children
-    std::list<TimePrd*> timePrd;                    //Optional
-    std::list<CollDate*> collDate;                  //Optional
-    std::list<Nation*> nation;                      //Optional
-    std::list<GeogCover*> geogCover;                //Optional
-    std::list<AnlyUnit*> anlyUnit;                  //Optional
-    std::list<Universe*> universe;                  //Optional
-    std::list<DataKind*> dataKind;                  //Optional
+    std::vector<TimePrd*> timePrd;                    //Optional
+    std::vector<CollDate*> collDate;                  //Optional
+    std::vector<Nation*> nation;                      //Optional
+    std::vector<GeogCover*> geogCover;                //Optional
+    std::vector<AnlyUnit*> anlyUnit;                  //Optional
+    std::vector<Universe*> universe;                  //Optional
+    std::vector<DataKind*> dataKind;                  //Optional
 public:
     SumDscr(std::string _ID);
 };

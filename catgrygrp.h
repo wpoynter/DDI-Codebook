@@ -1,7 +1,7 @@
 #ifndef CATGRYGRP_H
 #define CATGRYGRP_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "labl.h"
@@ -16,8 +16,8 @@ private:
     std::string catgry;
     std::string catGrp;
     //Children
-    std::list<Labl*> labl;                          //Optional
-    std::list<CatStat*> catStat;                    //Optional
+    std::vector<Labl*> labl;                          //Optional
+    std::vector<CatStat*> catStat;                    //Optional
 public:
     CatgryGrp(std::string _ID);
 };

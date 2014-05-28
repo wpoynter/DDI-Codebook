@@ -8,7 +8,7 @@ QT       -= core gui
 
 TARGET = DDI-Codebook
 TEMPLATE = lib
-CONFIG += staticlib
+CONFIG += staticlib c++11
 INCLUDEPATH +=  N:\CLOSER\Code\lib
 
 SOURCES += \

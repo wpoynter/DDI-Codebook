@@ -1,7 +1,7 @@
 #ifndef TITLESTMT_H
 #define TITLESTMT_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "titl.h"
@@ -16,7 +16,7 @@ private:
 
     //Children
     Titl *titl;                             //Required
-    std::list<IDNo*> idno;                  //Optional
+    std::vector<IDNo*> idno;                  //Optional
 public:
     TitleStmt(std::string _ID = "");
     TitleStmt(rapidxml::xml_node<> *_node);
@@ -27,6 +27,13 @@ public:
     void readNode(rapidxml::xml_node<> *_node);
 
     Titl* getTitl();
+    std::vector<IDNo*>::iterator getIDNoBegin();
+    std::vector<IDNo*>::iterator getIDNoEnd();
+
+    //Print functions
+    void printTitl();
+    void printIDNo();
+    void printIDNo(int selection);
 };
 
 }

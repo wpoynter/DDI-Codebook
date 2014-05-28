@@ -1,7 +1,7 @@
 #ifndef VERSTMT_H
 #define VERSTMT_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "version.h"
@@ -14,7 +14,7 @@ class VerStmt : public DDIEntity
 private:
     //Children
     Version *version;
-    std::list<Notes*> notes;
+    std::vector<Notes*> notes;
 public:
     VerStmt(std::string _ID = "");
     VerStmt(rapidxml::xml_node<> *_node);

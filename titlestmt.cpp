@@ -39,3 +39,32 @@ DDI::Titl *DDI::TitleStmt::getTitl()
 {
     return titl;
 }
+
+std::vector<DDI::IDNo*>::iterator DDI::TitleStmt::getIDNoBegin()
+{
+    return idno.begin();
+}
+
+std::vector<DDI::IDNo*>::iterator DDI::TitleStmt::getIDNoEnd()
+{
+    return idno.end();
+}
+
+void DDI::TitleStmt::printTitl()
+{
+    std::cout << "Title: " << titl->getContents() << std::endl;
+}
+
+void DDI::TitleStmt::printIDNo()
+{
+    for (std::vector<IDNo*>::iterator iter = idno.begin();
+         iter != idno.end(); iter++)
+    {
+        std::cout << "ID number: " << (*iter)->getContents() << std::endl;
+    }
+}
+
+void DDI::TitleStmt::printIDNo(int selection)
+{
+    std::cout << "ID number: " << idno[selection]->getContents() << std::endl;
+}

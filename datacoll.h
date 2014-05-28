@@ -1,7 +1,7 @@
 #ifndef DATACOLL_H
 #define DATACOLL_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "timemeth.h"
@@ -18,13 +18,13 @@ class DataColl : public DDIEntity
 {
 private:
     //Children
-    std::list<TimeMeth*> timeMeth;                      //Optional
-    std::list<DataCollector*> dataCollector;            //Optional
-    std::list<SampProc*> sampProc;                      //Optional
-    std::list<CollMode*> collMode;                      //Optional
+    std::vector<TimeMeth*> timeMeth;                      //Optional
+    std::vector<DataCollector*> dataCollector;            //Optional
+    std::vector<SampProc*> sampProc;                      //Optional
+    std::vector<CollMode*> collMode;                      //Optional
     Sources *sources;                                   //Optional
-    std::list<Weight*> weight;                          //Optional
-    std::list<CleanOps*> cleanOps;                      //Optional
+    std::vector<Weight*> weight;                          //Optional
+    std::vector<CleanOps*> cleanOps;                      //Optional
 public:
     DataColl(std::string _ID);
 };

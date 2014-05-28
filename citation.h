@@ -1,7 +1,7 @@
 #ifndef CITATION_H
 #define CITATION_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "titlestmt.h"
@@ -17,14 +17,10 @@ namespace DDI {
 class Citation : public DDIEntity
 {
 private:
-    //Attributes
-    std::string xml_lang;
-    std::string source;
-
     //Children
     TitleStmt *titleStmt;               //Required
     ProdStmt *prodStmt;                 //Optional
-    std::list<VerStmt*> verStmt;        //Optional
+    std::vector<VerStmt*> verStmt;        //Optional
     RspStmt *rspStmt;                   //Optional
     DistStmt *distStmt;                 //Optional
     SerStmt *serStmt;                   //Optional
@@ -39,6 +35,13 @@ public:
     void readNode(rapidxml::xml_node<> *_node);
 
     TitleStmt* getTitlStmt();
+
+    //Print functions
+    void printTitlStmt();
+    void printTitl();
+    void printIDNo();
+    void printIDNo(int selection = 0);
+    void printRspStmt();
 };
 
 }

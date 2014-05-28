@@ -1,7 +1,7 @@
 #ifndef FILEDSCR_H
 #define FILEDSCR_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "filetxt.h"
@@ -13,8 +13,8 @@ class FileDscr : public DDIEntity
 {
 private:
     //Children
-    std::list<FileTxt*> fileTxt;                            //Optional
-    std::list<Notes*> notes;                                //Optional
+    std::vector<FileTxt*> fileTxt;                            //Optional
+    std::vector<Notes*> notes;                                //Optional
 public:
     FileDscr(std::string _ID);
 };

@@ -1,7 +1,7 @@
 #ifndef DOCDSCR_H
 #define DOCDSCR_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "citation.h"
@@ -14,7 +14,7 @@ class DocDscr : public DDIEntity
 private:
     //Children
     Citation *citation;                         //Optional
-    std::list<Notes*> notes;                    //Optional
+    std::vector<Notes*> notes;                    //Optional
 public:
     DocDscr(std::string _ID = "");
     DocDscr(rapidxml::xml_node<> *_node);

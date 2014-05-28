@@ -1,7 +1,7 @@
 #ifndef METHOD_H
 #define METHOD_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "datacoll.h"
@@ -13,8 +13,8 @@ class Method : public DDIEntity
 {
 private:
     //Children
-    std::list<DataColl*> dataColl;                      //Optional
-    std::list<Notes*> notes;                            //Optional
+    std::vector<DataColl*> dataColl;                      //Optional
+    std::vector<Notes*> notes;                            //Optional
 public:
     Method(std::string _ID);
     Method(rapidxml::xml_node<> *_node);

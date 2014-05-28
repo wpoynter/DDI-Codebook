@@ -61,3 +61,30 @@ DDI::TitleStmt *DDI::Citation::getTitlStmt()
 {
     return titleStmt;
 }
+
+void DDI::Citation::printTitlStmt()
+{
+    titleStmt->printTitl();
+    titleStmt->printIDNo();
+}
+
+void DDI::Citation::printTitl()
+{
+    titleStmt->printTitl();
+}
+
+void DDI::Citation::printIDNo()
+{
+    titleStmt->printIDNo();
+}
+
+void DDI::Citation::printIDNo(int selection)
+{
+    titleStmt->printIDNo(selection);
+}
+
+void DDI::Citation::printRspStmt()
+{
+    rspStmt->printAuthEnty();
+    rspStmt->printOthId();
+}

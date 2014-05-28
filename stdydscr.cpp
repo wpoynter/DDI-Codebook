@@ -48,3 +48,13 @@ void DDI::StdyDscr::readNode(rapidxml::xml_node<> *_node) {
         }
     }
 }
+
+std::vector<DDI::Citation*>::iterator DDI::StdyDscr::getCitationBegin()
+{
+    return citation.begin();
+}
+
+std::vector<DDI::Citation*>::iterator DDI::StdyDscr::getCitationEnd()
+{
+    return citation.end();
+}

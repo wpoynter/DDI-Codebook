@@ -1,7 +1,7 @@
 #ifndef STDYDSCR_H
 #define STDYDSCR_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "citation.h"
@@ -16,11 +16,11 @@ class StdyDscr : public DDIEntity
 {
 private:
     //Children
-    std::list<Citation*> citation;                      //Required
-    std::list<StdyInfo*> stdyInfo;                      //Optional
-    std::list<Method*> method;                          //Optional
-    std::list<DataAccs*> dataAccs;                      //Optional
-    std::list<Notes*> notes;                            //Optional
+    std::vector<Citation*> citation;                      //Required
+    std::vector<StdyInfo*> stdyInfo;                      //Optional
+    std::vector<Method*> method;                          //Optional
+    std::vector<DataAccs*> dataAccs;                      //Optional
+    std::vector<Notes*> notes;                            //Optional
 public:
     StdyDscr(std::string _ID = "");
     StdyDscr(rapidxml::xml_node<> *_node);
@@ -29,6 +29,9 @@ public:
 
     std::string getXMLLabel();
     void readNode(rapidxml::xml_node<> *_node);
+
+    std::vector<Citation*>::iterator getCitationBegin();
+    std::vector<Citation*>::iterator getCitationEnd();
 };
 
 }

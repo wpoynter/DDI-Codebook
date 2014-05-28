@@ -1,7 +1,7 @@
 #ifndef DISTSTMT_H
 #define DISTSTMT_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "distrbtr.h"
@@ -13,7 +13,7 @@ class DistStmt : public DDIEntity
 {
 private:
     //Children
-    std::list<Distrbtr*> distrbtr;                  //Optional
+    std::vector<Distrbtr*> distrbtr;                  //Optional
     DistDate *distDate;                             //Optional
 public:
     DistStmt(std::string _ID = "");

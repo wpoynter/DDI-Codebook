@@ -1,7 +1,7 @@
 #ifndef DIMENSNS_H
 #define DIMENSNS_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "caseqnty.h"
@@ -15,10 +15,10 @@ class Dimensns : public DDIEntity
 {
 private:
     //Children
-    std::list<CaseQnty*> caseQnty;                      //Optional
-    std::list<VarQnty*> varQnty;                        //Optional
-    std::list<LogRecl*> logRecl;                        //Optional
-    std::list<RecPrCas*> recPrCas;                      //Optional
+    std::vector<CaseQnty*> caseQnty;                      //Optional
+    std::vector<VarQnty*> varQnty;                        //Optional
+    std::vector<LogRecl*> logRecl;                        //Optional
+    std::vector<RecPrCas*> recPrCas;                      //Optional
 public:
     Dimensns(std::string _ID);
 };

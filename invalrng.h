@@ -1,7 +1,7 @@
 #ifndef INVALRNG_H
 #define INVALRNG_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "range.h"
@@ -14,9 +14,9 @@ class Invalrng : public DDIEntity
 {
 private:
     //Children
-    std::list<Range*> range;                        //Optional
-    std::list<Item*> item;                          //Optional
-    std::list<Notes*> notes;                        //Optional
+    std::vector<Range*> range;                        //Optional
+    std::vector<Item*> item;                          //Optional
+    std::vector<Notes*> notes;                        //Optional
 public:
     Invalrng(std::string _ID);
 };

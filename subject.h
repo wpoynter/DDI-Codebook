@@ -1,7 +1,7 @@
 #ifndef SUBJECT_H
 #define SUBJECT_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "keyword.h"
@@ -11,7 +11,7 @@ namespace DDI {
 class Subject : public DDIEntity
 {
 private:
-    std::list<Keyword*> keyword;
+    std::vector<Keyword*> keyword;
 public:
     Subject(std::string _ID);
 };

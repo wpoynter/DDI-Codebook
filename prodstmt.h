@@ -1,7 +1,7 @@
 #ifndef PRODSTMT_H
 #define PRODSTMT_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "producer.h"
@@ -18,11 +18,11 @@ private:
     //Attributes
 
     //Children
-    std::list<Producer*> producer;              //Optional
+    std::vector<Producer*> producer;              //Optional
     Copyright *copyright;                       //Optional
-    std::list<ProdDate*> prodDate;              //Optional
-    std::list<Software*> software;              //Optional
-    std::list<FundAg*> fundAg;                  //Optional
+    std::vector<ProdDate*> prodDate;              //Optional
+    std::vector<Software*> software;              //Optional
+    std::vector<FundAg*> fundAg;                  //Optional
 public:
     ProdStmt(std::string _ID = "");
     ProdStmt(rapidxml::xml_node<> *_node);

@@ -1,7 +1,7 @@
 #ifndef DATADSCR_H
 #define DATADSCR_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "vargrp.h"
@@ -13,8 +13,8 @@ class DataDscr : public DDIEntity
 {
 private:
     //Children
-    std::list<VarGrp*> varGrp;                          //Optional
-    std::list<Var*> var;                                //Optional
+    std::vector<VarGrp*> varGrp;                          //Optional
+    std::vector<Var*> var;                                //Optional
 public:
     DataDscr(std::string _ID);
 };

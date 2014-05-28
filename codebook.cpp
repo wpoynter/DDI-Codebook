@@ -1,5 +1,7 @@
 #include "codebook.h"
 
+#include <iterator>
+
 const std::string DDI::Codebook::_label_ = "codeBook";
 
 DDI::Codebook::Codebook()
@@ -16,7 +18,9 @@ void DDI::Codebook::test() {
     Titl *titl = titlStmt->getTitl();
     std::cout << titl->getXMLLabel() << std::endl;
     std::cout << titl->getContents() << std::endl;
-    std::cout << stdyDscr.front()->getXMLLabel() << std::endl;
+    std::cout << (*(stdyDscr.front()->getCitationBegin()))->getTitlStmt()->getTitl()->getContents() << std::endl;
+    std::cout << stdyDscr.front()->getXMLLabel() << std::endl << std::endl;
+    printStudies();
 }
 
 std::string DDI::Codebook::getXMLLang() {
@@ -34,7 +38,59 @@ void DDI::Codebook::readNode(rapidxml::xml_node<> *_node) {
         }
         else if (node->name() == DDI::StdyDscr::_label_)
         {
-            stdyDscr.push_back(new StdyDscr());
+            stdyDscr.push_back(new StdyDscr(node));
         }
     }
+}
+
+void DDI::Codebook::printStudies() {
+    if (stdyDscr.size() == 0)
+    {
+        std::cout << "There are no studies" << std::endl;
+    }
+    else if (stdyDscr.size() == 1)
+    {
+        printStudy();
+    }
+    else
+    {
+        int i = 0;
+        for (std::vector<StdyDscr*>::iterator iter = stdyDscr.begin();
+             iter != stdyDscr.end(); iter++)
+        {
+            i++;
+            std::cout << "[" << i << "] ";
+            int citations = std::distance((*iter)->getCitationBegin(),(*iter)->getCitationEnd());
+            if (citations == 0)
+            {
+                std::cout << "No citations." << std::endl;
+            }
+            else if (citations == 1)
+            {
+                std::cout << "Title: " <<
+                    (*((*iter)->getCitationBegin()))->getTitlStmt()->getTitl()->getContents()
+                    << std::endl;
+            }
+            else
+            {
+                std::cout << citations << " citations." << std::endl;
+            }
+        }
+    }
+}
+
+void DDI::Codebook::printStudy(int selection) {
+    std::vector<StdyDscr*>::iterator sd = stdyDscr.begin();
+    std::advance(sd, selection);
+    for (std::vector<Citation*>::iterator iter = (*sd)->getCitationBegin();
+         iter != (*sd)->getCitationEnd(); iter++)
+    {
+        (*iter)->printTitlStmt();
+        (*iter)->printRspStmt();
+        if (std::next(iter) != (*sd)->getCitationEnd())
+        {
+            std::cout << "==================" << std::endl;
+        }
+    }
+    std::cout << (*((*sd)->getCitationBegin()))->getTitlStmt()->getTitl()->getContents() << std::endl;
 }

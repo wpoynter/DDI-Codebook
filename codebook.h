@@ -1,7 +1,7 @@
 #ifndef CODEBOOK_H
 #define CODEBOOK_H
 
-#include <list>
+#include <vector>
 #include <iostream>
 
 #include "docdscr.h"
@@ -16,11 +16,11 @@ class Codebook : public DDIEntity
 {
 private:
     //Children
-    std::list<DocDscr*> docDscr;                //Optional
-    std::list<StdyDscr*> stdyDscr;              //Required
-    std::list<FileDscr*> fileDscr;              //Optional
-    std::list<DataDscr*> dataDscr;              //Optional
-    std::list<OtherMat*> otherMat;              //Optional
+    std::vector<DocDscr*> docDscr;                //Optional
+    std::vector<StdyDscr*> stdyDscr;              //Required
+    std::vector<FileDscr*> fileDscr;              //Optional
+    std::vector<DataDscr*> dataDscr;              //Optional
+    std::vector<OtherMat*> otherMat;              //Optional
 public:
     Codebook();
     Codebook(std::istream &is);
@@ -32,6 +32,10 @@ public:
 
     //Test function
     void test();
+
+    //Print functions
+    void printStudies();
+    void printStudy(int selection = 0);
 };
 
 }

@@ -34,3 +34,31 @@ void DDI::RspStmt::readNode(rapidxml::xml_node<> *_node) {
         }
     }
 }
+
+void DDI::RspStmt::printAuthEnty()
+{
+    for (std::vector<AuthEntry*>::iterator iter = authEntry.begin();
+         iter != authEntry.end(); iter++)
+    {
+        std::cout << "Authoring Entity: " << (*iter)->getContents() << std::endl;
+    }
+}
+
+void DDI::RspStmt::printAuthEnty(int selection)
+{
+    std::cout << "Authoring Entity: " << authEntry[selection]->getContents() << std::endl;
+}
+
+void DDI::RspStmt::printOthId()
+{
+    for (std::vector<OthId*>::iterator iter = othId.begin();
+         iter != othId.end(); iter++)
+    {
+        std::cout << "Other Identification: " << (*iter)->getContents() << std::endl;
+    }
+}
+
+void DDI::RspStmt::printOthId(int selection)
+{
+    std::cout << "Other Identification: " << othId[selection]->getContents() << std::endl;
+}

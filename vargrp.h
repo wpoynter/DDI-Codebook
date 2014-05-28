@@ -1,7 +1,7 @@
 #ifndef VARGRP_H
 #define VARGRP_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "labl.h"
@@ -15,7 +15,7 @@ private:
     std::string var;
     std::string varGrp;
     //Children
-    std::list<Labl*> labl;                          //Optional
+    std::vector<Labl*> labl;                          //Optional
 public:
     VarGrp(std::string _ID);
 };

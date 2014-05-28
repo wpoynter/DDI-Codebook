@@ -1,7 +1,7 @@
 #ifndef RSPSTMT_H
 #define RSPSTMT_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "authentry.h"
@@ -13,8 +13,8 @@ class RspStmt : public DDIEntity
 {
 private:
     //Children
-    std::list<AuthEntry*> authEntry;
-    std::list<OthId*> othId;
+    std::vector<AuthEntry*> authEntry;
+    std::vector<OthId*> othId;
 public:
     RspStmt(std::string _ID = "");
     RspStmt(rapidxml::xml_node<> *_node);
@@ -23,6 +23,11 @@ public:
 
     std::string getXMLLabel();
     void readNode(rapidxml::xml_node<> *_node);
+
+    void printAuthEnty();
+    void printAuthEnty(int selection);
+    void printOthId();
+    void printOthId(int selection);
 };
 
 }

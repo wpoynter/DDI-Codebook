@@ -1,7 +1,7 @@
 #ifndef DATAACCS_H
 #define DATAACCS_H
 
-#include <list>
+#include <vector>
 
 #include "ddientity.h"
 #include "setavail.h"
@@ -13,8 +13,8 @@ class DataAccs : public DDIEntity
 {
 private:
     //Children
-    std::list<SetAvail*> setAvail;                  //Optional
-    std::list<UseStmt*> useStmt;                    //Optional
+    std::vector<SetAvail*> setAvail;                  //Optional
+    std::vector<UseStmt*> useStmt;                    //Optional
 public:
     DataAccs(std::string _ID);
     DataAccs(rapidxml::xml_node<> *_node);
