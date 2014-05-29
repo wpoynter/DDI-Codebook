@@ -2,7 +2,7 @@
 
 const std::string DDI::Copyright::_label_ = "copyright";
 
-DDI::Copyright::Copyright(std::string _ID = "")
+DDI::Copyright::Copyright(std::string _ID)
 {
     ID = _ID;
 }

@@ -2,7 +2,7 @@
 
 const std::string DDI::Software::_label_ = "software";
 
-DDI::Software::Software(std::string _ID = "")
+DDI::Software::Software(std::string _ID)
 {
     ID = _ID;
 }

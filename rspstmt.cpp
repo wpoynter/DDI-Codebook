@@ -1,6 +1,6 @@
 #include "rspstmt.h"
 
-const std::string DDI::RspStmt::_label_ = "docDscr";
+const std::string DDI::RspStmt::_label_ = "rspStmt";
 
 DDI::RspStmt::RspStmt(std::string _ID)
 {

@@ -87,10 +87,10 @@ void DDI::Codebook::printStudy(int selection) {
     {
         (*iter)->printTitlStmt();
         (*iter)->printRspStmt();
+        (*iter)->printProdStmt();
         if (std::next(iter) != (*sd)->getCitationEnd())
         {
             std::cout << "==================" << std::endl;
         }
     }
-    std::cout << (*((*sd)->getCitationBegin()))->getTitlStmt()->getTitl()->getContents() << std::endl;
 }

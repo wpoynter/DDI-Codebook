@@ -88,3 +88,12 @@ void DDI::Citation::printRspStmt()
     rspStmt->printAuthEnty();
     rspStmt->printOthId();
 }
+
+void DDI::Citation::printProdStmt()
+{
+    prodStmt->printProducer();
+    prodStmt->printCopyright();
+    prodStmt->printProdDate();
+    prodStmt->printSoftware();
+    prodStmt->printFundAg();
+}

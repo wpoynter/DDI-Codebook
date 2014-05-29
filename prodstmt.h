@@ -31,6 +31,17 @@ public:
 
     std::string getXMLLabel();
     void readNode(rapidxml::xml_node<> *_node);
+
+    //Print Functions
+    void printProducer();
+    void printProducer(int selection);
+    void printCopyright();
+    void printProdDate();
+    void printProdDate(int selection);
+    void printSoftware();
+    void printSoftware(int selection);
+    void printFundAg();
+    void printFundAg(int selection);
 };
 
 }

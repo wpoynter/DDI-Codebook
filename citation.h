@@ -20,7 +20,7 @@ private:
     //Children
     TitleStmt *titleStmt;               //Required
     ProdStmt *prodStmt;                 //Optional
-    std::vector<VerStmt*> verStmt;        //Optional
+    std::vector<VerStmt*> verStmt;      //Optional
     RspStmt *rspStmt;                   //Optional
     DistStmt *distStmt;                 //Optional
     SerStmt *serStmt;                   //Optional
@@ -42,6 +42,7 @@ public:
     void printIDNo();
     void printIDNo(int selection = 0);
     void printRspStmt();
+    void printProdStmt();
 };
 
 }

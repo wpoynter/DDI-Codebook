@@ -8,7 +8,12 @@ namespace DDI {
 class FundAg : public DDIEntity
 {
 public:
-    FundAg(std::string _ID);
+    FundAg(std::string _ID = "");
+    FundAg(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }
