@@ -40,6 +40,10 @@ void DDI::Codebook::readNode(rapidxml::xml_node<> *_node) {
         {
             stdyDscr.push_back(new StdyDscr(node));
         }
+        else if (node->name() == DDI::DataDscr::_label_)
+        {
+            dataDscr.push_back(new DataDscr(node));
+        }
     }
 }
 

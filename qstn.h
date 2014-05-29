@@ -13,7 +13,13 @@ class Qstn : public DDIEntity
 private:
     std::vector<QstnLit*> qstnLit;                        //Optional
 public:
-    Qstn(std::string _ID);
+    Qstn(std::string _ID = "");
+    Qstn(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
+    void readNode(rapidxml::xml_node<> *_node);
 };
 
 }

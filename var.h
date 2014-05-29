@@ -43,7 +43,14 @@ private:
     VarFormat *varFormat;                               //Optional
     std::vector<Notes*> notes;                            //Optional
 public:
-    Var(std::string _ID);
+    Var(std::string _ID = "");
+    Var(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
+    void readNode(rapidxml::xml_node<> *_node);
+    bool readAttribute(std::string _name, std::string _value);
 };
 
 }

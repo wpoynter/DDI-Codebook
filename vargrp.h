@@ -17,7 +17,14 @@ private:
     //Children
     std::vector<Labl*> labl;                          //Optional
 public:
-    VarGrp(std::string _ID);
+    VarGrp(std::string _ID = "");
+    VarGrp(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
+    void readNode(rapidxml::xml_node<> *_node);
+    bool readAttribute(std::string _name, std::string _value);
 };
 
 }

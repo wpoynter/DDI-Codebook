@@ -18,7 +18,13 @@ private:
     std::vector<Item*> item;                          //Optional
     std::vector<Notes*> notes;                        //Optional
 public:
-    Invalrng(std::string _ID);
+    Invalrng(std::string _ID = "");
+    Invalrng(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
+    void readNode(rapidxml::xml_node<> *_node);
 };
 
 }

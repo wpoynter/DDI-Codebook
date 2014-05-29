@@ -16,7 +16,13 @@ private:
     std::vector<VarGrp*> varGrp;                          //Optional
     std::vector<Var*> var;                                //Optional
 public:
-    DataDscr(std::string _ID);
+    DataDscr(std::string _ID = "");
+    DataDscr(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
+    void readNode(rapidxml::xml_node<> *_node);
 };
 
 }

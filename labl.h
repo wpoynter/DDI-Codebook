@@ -8,7 +8,12 @@ namespace DDI {
 class Labl : public DDIEntity
 {
 public:
-    Labl(std::string _ID);
+    Labl(std::string _ID = "");
+    Labl(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }
