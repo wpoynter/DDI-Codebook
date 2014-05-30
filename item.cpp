@@ -2,7 +2,7 @@
 
 const std::string DDI::Item::_label_ = "item";
 
-DDI::Item::Item(std::string _ID = "")
+DDI::Item::Item(std::string _ID)
 {
     ID = _ID;
 }

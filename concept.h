@@ -8,7 +8,12 @@ namespace DDI {
 class Concept : public DDIEntity
 {
 public:
-    Concept(std::string _ID);
+    Concept(std::string _ID = "");
+    Concept(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

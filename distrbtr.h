@@ -8,7 +8,12 @@ namespace DDI {
 class Distrbtr : public DDIEntity
 {
 public:
-    Distrbtr(std::string _ID);
+    Distrbtr(std::string _ID = "");
+    Distrbtr(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

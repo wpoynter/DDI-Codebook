@@ -98,7 +98,8 @@ SOURCES += \
     reader.cpp \
     ddientity.cpp \
     date.cpp \
-    utils.cpp
+    utils.cpp \
+    pipe.cpp
 
 HEADERS += \
     docdscr.h \
@@ -189,7 +190,8 @@ HEADERS += \
     N:/CLOSER/Code/lib/rapidxml-1.13/rapidxml_utils.hpp \
     reader.h \
     date.h \
-    utils.h
+    utils.h \
+    pipe.h
 unix {
     target.path = /usr/lib
     INSTALLS += target

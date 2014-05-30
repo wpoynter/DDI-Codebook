@@ -16,7 +16,13 @@ private:
     Dimensns *dimensns;                             //Optional
     FileType *fileType;                             //Optional
 public:
-    FileTxt(std::string _ID);
+    FileTxt(std::string _ID = "");
+    FileTxt(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
+    void readNode(rapidxml::xml_node<> *_node);
 };
 
 }

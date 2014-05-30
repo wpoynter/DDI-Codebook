@@ -30,7 +30,7 @@ void DDI::RspStmt::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of titlStmt" << std::endl;
+            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }

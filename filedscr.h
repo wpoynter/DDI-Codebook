@@ -16,7 +16,13 @@ private:
     std::vector<FileTxt*> fileTxt;                            //Optional
     std::vector<Notes*> notes;                                //Optional
 public:
-    FileDscr(std::string _ID);
+    FileDscr(std::string _ID = "");
+    FileDscr(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
+    void readNode(rapidxml::xml_node<> *_node);
 };
 
 }

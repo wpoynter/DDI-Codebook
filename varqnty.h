@@ -8,7 +8,12 @@ namespace DDI {
 class VarQnty : public DDIEntity
 {
 public:
-    VarQnty(std::string _ID);
+    VarQnty(std::string _ID = "");
+    VarQnty(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

@@ -8,7 +8,12 @@ namespace DDI {
 class Drvdesc : public DDIEntity
 {
 public:
-    Drvdesc(std::string _ID);
+    Drvdesc(std::string _ID = "");
+    Drvdesc(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

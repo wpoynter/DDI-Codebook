@@ -8,7 +8,12 @@ namespace DDI {
 class RecPrCas : public DDIEntity
 {
 public:
-    RecPrCas(std::string _ID);
+    RecPrCas(std::string _ID = "");
+    RecPrCas(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

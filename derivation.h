@@ -12,7 +12,12 @@ private:
     //Children
     Drvdesc *drvdesc;                       //Optional
 public:
-    Derivation(std::string _ID);
+    Derivation(std::string _ID = "");
+    Derivation(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

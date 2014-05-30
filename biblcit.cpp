@@ -1,6 +1,6 @@
 #include "biblcit.h"
 
-const std::string DDI::BiblCit::_label_ = "docDscr";
+const std::string DDI::BiblCit::_label_ = "biblCit";
 
 DDI::BiblCit::BiblCit(std::string _ID)
 {

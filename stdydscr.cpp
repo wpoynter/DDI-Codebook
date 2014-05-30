@@ -44,7 +44,7 @@ void DDI::StdyDscr::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            //Throw warning
+            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }

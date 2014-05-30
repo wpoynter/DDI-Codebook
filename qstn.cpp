@@ -2,7 +2,7 @@
 
 const std::string DDI::Qstn::_label_ = "qstn";
 
-DDI::Qstn::Qstn(std::string _ID = "")
+DDI::Qstn::Qstn(std::string _ID)
 {
     ID = _ID;
 }
@@ -27,7 +27,7 @@ void DDI::Qstn::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of citation" << std::endl;
+            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }

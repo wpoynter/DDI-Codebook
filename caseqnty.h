@@ -8,7 +8,12 @@ namespace DDI {
 class CaseQnty : public DDIEntity
 {
 public:
-    CaseQnty(std::string _ID);
+    CaseQnty(std::string _ID = "");
+    CaseQnty(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

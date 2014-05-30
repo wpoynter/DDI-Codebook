@@ -8,7 +8,12 @@ namespace DDI {
 class Table : public DDIEntity
 {
 public:
-    Table(std::string _ID);
+    Table(std::string _ID = "");
+    Table(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

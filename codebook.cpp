@@ -40,9 +40,17 @@ void DDI::Codebook::readNode(rapidxml::xml_node<> *_node) {
         {
             stdyDscr.push_back(new StdyDscr(node));
         }
+        else if (node->name() == DDI::FileDscr::_label_)
+        {
+            fileDscr.push_back(new FileDscr(node));
+        }
         else if (node->name() == DDI::DataDscr::_label_)
         {
             dataDscr.push_back(new DataDscr(node));
+        }
+        else if (node->name() == DDI::OtherMat::_label_)
+        {
+            otherMat.push_back(new OtherMat(node));
         }
     }
 }

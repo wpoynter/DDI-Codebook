@@ -41,7 +41,7 @@ void DDI::DDIEntity::readNode(rapidxml::xml_node<> *_node) {
          attr; attr = attr->next_attribute())
     {
         if (!readAttribute(attr->name(), attr->value()))
-            std::cout << "Unrecognised attribute: " << attr->name() << " (" << attr->value() << ")" << std::endl;
+            std::cout << "[" << getXMLLabel() << "] Unrecognised attribute: " << attr->name() << " (" << attr->value() << ")" << std::endl;
     }
     _contents_ = _node->value();
 }

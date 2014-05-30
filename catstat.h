@@ -8,7 +8,12 @@ namespace DDI {
 class CatStat : public DDIEntity
 {
 public:
-    CatStat(std::string _ID);
+    CatStat(std::string _ID = "");
+    CatStat(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

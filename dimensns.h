@@ -20,7 +20,13 @@ private:
     std::vector<LogRecl*> logRecl;                        //Optional
     std::vector<RecPrCas*> recPrCas;                      //Optional
 public:
-    Dimensns(std::string _ID);
+    Dimensns(std::string _ID = "");
+    Dimensns(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
+    void readNode(rapidxml::xml_node<> *_node);
 };
 
 }

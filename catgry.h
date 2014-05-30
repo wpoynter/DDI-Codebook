@@ -20,7 +20,13 @@ private:
     std::vector<Txt*> txt;                    //Optional
     std::vector<CatStat*> catStat;            //Optional
 public:
-    Catgry(std::string _ID);
+    Catgry(std::string _ID = "");
+    Catgry(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
+    void readNode(rapidxml::xml_node<> *_node);
 };
 
 }

@@ -8,7 +8,12 @@ namespace DDI {
 class SumStat : public DDIEntity
 {
 public:
-    SumStat(std::string _ID);
+    SumStat(std::string _ID = "");
+    SumStat(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

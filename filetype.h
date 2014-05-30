@@ -8,7 +8,12 @@ namespace DDI {
 class FileType : public DDIEntity
 {
 public:
-    FileType(std::string _ID);
+    FileType(std::string _ID = "");
+    FileType(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }

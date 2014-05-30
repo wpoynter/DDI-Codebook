@@ -8,7 +8,12 @@ namespace DDI {
 class QstnLit : public DDIEntity
 {
 public:
-    QstnLit(std::string _ID);
+    QstnLit(std::string _ID = "");
+    QstnLit(rapidxml::xml_node<> *_node);
+
+    static const std::string _label_;
+
+    std::string getXMLLabel();
 };
 
 }
