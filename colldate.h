@@ -8,7 +8,7 @@ namespace DDI {
 class CollDate : public DDIEntity
 {
 public:
-    CollDate(std::string _ID);
+    CollDate(std::string _ID = "");
 };
 
 }

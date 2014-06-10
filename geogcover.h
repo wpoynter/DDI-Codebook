@@ -8,7 +8,7 @@ namespace DDI {
 class GeogCover : public DDIEntity
 {
 public:
-    GeogCover(std::string _ID);
+    GeogCover(std::string _ID = "");
 };
 
 }

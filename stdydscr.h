@@ -34,6 +34,8 @@ public:
     std::vector<Citation*>::iterator getCitationEnd();
 };
 
+typedef std::shared_ptr<StdyDscr> StdyDscrPtr;
+
 }
 
 #endif // STDYDSCR_H

@@ -13,7 +13,7 @@ class Subject : public DDIEntity
 private:
     std::vector<Keyword*> keyword;
 public:
-    Subject(std::string _ID);
+    Subject(std::string _ID = "");
 };
 
 }

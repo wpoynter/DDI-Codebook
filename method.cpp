@@ -2,7 +2,7 @@
 
 const std::string DDI::Method::_label_ = "method";
 
-DDI::Method::Method(std::string _ID = "")
+DDI::Method::Method(std::string _ID)
 {
     ID = _ID;
 }

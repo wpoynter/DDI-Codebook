@@ -2,7 +2,7 @@
 
 const std::string DDI::Producer::_label_ = "producer";
 
-DDI::Producer::Producer(std::string _ID = "")
+DDI::Producer::Producer(std::string _ID)
 {
     ID = _ID;
 }

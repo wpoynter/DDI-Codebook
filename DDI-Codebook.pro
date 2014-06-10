@@ -9,7 +9,7 @@ QT       -= core gui
 TARGET = DDI-Codebook
 TEMPLATE = lib
 CONFIG += staticlib c++11
-INCLUDEPATH +=  N:\CLOSER\Code\lib
+INCLUDEPATH +=  N:\CLOSER\Code\lib /opt/local/include/
 
 SOURCES += \
     docdscr.cpp \
@@ -191,7 +191,9 @@ HEADERS += \
     reader.h \
     date.h \
     utils.h \
-    pipe.h
+    pipe.h \
+    refid.h \
+    referenceable.h
 unix {
     target.path = /usr/lib
     INSTALLS += target

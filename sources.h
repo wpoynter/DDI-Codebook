@@ -8,7 +8,7 @@ namespace DDI {
 class Sources : public DDIEntity
 {
 public:
-    Sources(std::string _ID);
+    Sources(std::string _ID = "");
 };
 
 }

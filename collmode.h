@@ -8,7 +8,7 @@ namespace DDI {
 class CollMode : public DDIEntity
 {
 public:
-    CollMode(std::string _ID);
+    CollMode(std::string _ID = "");
 };
 
 }

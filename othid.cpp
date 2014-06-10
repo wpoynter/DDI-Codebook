@@ -2,7 +2,7 @@
 
 const std::string DDI::OthId::_label_ = "othId";
 
-DDI::OthId::OthId(std::string _ID = "")
+DDI::OthId::OthId(std::string _ID)
 {
     ID = _ID;
 }

@@ -8,7 +8,7 @@ namespace DDI {
 class SampProc : public DDIEntity
 {
 public:
-    SampProc(std::string _ID);
+    SampProc(std::string _ID = "");
 };
 
 }

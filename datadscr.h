@@ -9,12 +9,15 @@
 
 namespace DDI {
 
+typedef std::vector<VarGrpPtr> VarGrpPtrs;
+typedef std::vector<VarPtr> VarPtrs;
+
 class DataDscr : public DDIEntity
 {
 private:
     //Children
-    std::vector<VarGrp*> varGrp;                          //Optional
-    std::vector<Var*> var;                                //Optional
+    VarGrpPtrs varGrp;                          //Optional
+    VarPtrs var;                                //Optional
 public:
     DataDscr(std::string _ID = "");
     DataDscr(rapidxml::xml_node<> *_node);
@@ -23,7 +26,14 @@ public:
 
     std::string getXMLLabel();
     void readNode(rapidxml::xml_node<> *_node);
+
+    VarGrpPtrs::iterator getVarGrpBegin();
+    VarGrpPtrs::iterator getVarGrpEnd();
+    VarPtrs::iterator getVarBegin();
+    VarPtrs::iterator getVarEnd();
 };
+
+typedef std::shared_ptr<DataDscr> DataDscrPtr;
 
 }
 

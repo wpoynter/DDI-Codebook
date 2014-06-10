@@ -8,7 +8,7 @@ namespace DDI {
 class FileQnty : public DDIEntity
 {
 public:
-    FileQnty(std::string _ID);
+    FileQnty(std::string _ID = "");
 };
 
 }

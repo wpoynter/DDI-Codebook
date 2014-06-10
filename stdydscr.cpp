@@ -1,5 +1,7 @@
 #include "stdydscr.h"
 
+#include "pipe.h"
+
 const std::string DDI::StdyDscr::_label_ = "stdyDscr";
 
 DDI::StdyDscr::StdyDscr(std::string _ID)
@@ -44,7 +46,7 @@ void DDI::StdyDscr::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
+            out << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }

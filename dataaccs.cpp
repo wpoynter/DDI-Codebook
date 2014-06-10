@@ -2,7 +2,7 @@
 
 const std::string DDI::DataAccs::_label_ = "dataAccs";
 
-DDI::DataAccs::DataAccs(std::string _ID = "")
+DDI::DataAccs::DataAccs(std::string _ID)
 {
     ID = _ID;
 }

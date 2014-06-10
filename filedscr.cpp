@@ -1,5 +1,7 @@
 #include "filedscr.h"
 
+#include "pipe.h"
+
 const std::string DDI::FileDscr::_label_ = "fileDscr";
 
 DDI::FileDscr::FileDscr(std::string _ID)
@@ -31,7 +33,7 @@ void DDI::FileDscr::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
+            out << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }

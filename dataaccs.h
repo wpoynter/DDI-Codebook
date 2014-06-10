@@ -16,7 +16,7 @@ private:
     std::vector<SetAvail*> setAvail;                  //Optional
     std::vector<UseStmt*> useStmt;                    //Optional
 public:
-    DataAccs(std::string _ID);
+    DataAccs(std::string _ID = "");
     DataAccs(rapidxml::xml_node<> *_node);
 
     static const std::string _label_;

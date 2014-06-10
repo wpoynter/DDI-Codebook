@@ -8,7 +8,7 @@ namespace DDI {
 class CleanOps : public DDIEntity
 {
 public:
-    CleanOps(std::string _ID);
+    CleanOps(std::string _ID = "");
 };
 
 }

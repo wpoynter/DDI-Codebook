@@ -48,3 +48,12 @@ const char *DDI::Utils::implode(std::vector<const char*> str, const char *glue)
     output.erase(output.length()-std::char_traits<char>::length(glue));
     return output.c_str();
 }
+
+
+std::string DDI::Utils::indent(int level, char c)
+{
+        std::stringstream output;
+        for(int i = 0; i < level; i++)
+            output << c;
+        return output.str();
+}

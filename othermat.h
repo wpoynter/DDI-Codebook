@@ -34,6 +34,8 @@ public:
     bool readAttribute(std::string _name, std::string _value);
 };
 
+typedef std::shared_ptr<OtherMat> OtherMatPtr;
+
 }
 
 #endif // OTHERMAT_H

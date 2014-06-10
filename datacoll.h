@@ -26,7 +26,7 @@ private:
     std::vector<Weight*> weight;                          //Optional
     std::vector<CleanOps*> cleanOps;                      //Optional
 public:
-    DataColl(std::string _ID);
+    DataColl(std::string _ID = "");
 };
 
 }

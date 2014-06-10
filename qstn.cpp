@@ -1,5 +1,7 @@
 #include "qstn.h"
 
+#include "pipe.h"
+
 const std::string DDI::Qstn::_label_ = "qstn";
 
 DDI::Qstn::Qstn(std::string _ID)
@@ -27,7 +29,7 @@ void DDI::Qstn::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
+            out << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }

@@ -1,5 +1,7 @@
 #include "titlestmt.h"
 
+#include "pipe.h"
+
 const std::string DDI::TitleStmt::_label_ = "titlStmt";
 
 DDI::TitleStmt::TitleStmt(std::string _ID)
@@ -30,7 +32,7 @@ void DDI::TitleStmt::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
+            out << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }
@@ -52,7 +54,7 @@ std::vector<DDI::IDNo*>::iterator DDI::TitleStmt::getIDNoEnd()
 
 void DDI::TitleStmt::printTitl()
 {
-    std::cout << "Title: " << titl->getContents() << std::endl;
+    out << "Title: " << titl->getContents() << std::endl;
 }
 
 void DDI::TitleStmt::printIDNo()
@@ -60,11 +62,11 @@ void DDI::TitleStmt::printIDNo()
     for (std::vector<IDNo*>::iterator iter = idno.begin();
          iter != idno.end(); iter++)
     {
-        std::cout << "ID number: " << (*iter)->getContents() << std::endl;
+        out << "ID number: " << (*iter)->getContents() << std::endl;
     }
 }
 
 void DDI::TitleStmt::printIDNo(int selection)
 {
-    std::cout << "ID number: " << idno[selection]->getContents() << std::endl;
+    out << "ID number: " << idno[selection]->getContents() << std::endl;
 }

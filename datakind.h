@@ -8,7 +8,7 @@ namespace DDI {
 class DataKind : public DDIEntity
 {
 public:
-    DataKind(std::string _ID);
+    DataKind(std::string _ID = "");
 };
 
 }

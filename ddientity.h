@@ -2,7 +2,6 @@
 #define DDIENTITY_H
 
 #include <string>
-#include <iostream>
 #include "rapidxml-1.13/rapidxml.hpp"
 
 namespace DDI {

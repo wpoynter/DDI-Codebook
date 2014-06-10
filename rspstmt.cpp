@@ -1,5 +1,7 @@
 #include "rspstmt.h"
 
+#include "pipe.h"
+
 const std::string DDI::RspStmt::_label_ = "rspStmt";
 
 DDI::RspStmt::RspStmt(std::string _ID)
@@ -30,7 +32,7 @@ void DDI::RspStmt::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
+            out << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }
@@ -40,13 +42,13 @@ void DDI::RspStmt::printAuthEnty()
     for (std::vector<AuthEntry*>::iterator iter = authEntry.begin();
          iter != authEntry.end(); iter++)
     {
-        std::cout << "Authoring Entity: " << (*iter)->getContents() << std::endl;
+        out << "Authoring Entity: " << (*iter)->getContents() << std::endl;
     }
 }
 
 void DDI::RspStmt::printAuthEnty(int selection)
 {
-    std::cout << "Authoring Entity: " << authEntry[selection]->getContents() << std::endl;
+    out << "Authoring Entity: " << authEntry[selection]->getContents() << std::endl;
 }
 
 void DDI::RspStmt::printOthId()
@@ -54,11 +56,11 @@ void DDI::RspStmt::printOthId()
     for (std::vector<OthId*>::iterator iter = othId.begin();
          iter != othId.end(); iter++)
     {
-        std::cout << "Other Identification: " << (*iter)->getContents() << std::endl;
+        out << "Other Identification: " << (*iter)->getContents() << std::endl;
     }
 }
 
 void DDI::RspStmt::printOthId(int selection)
 {
-    std::cout << "Other Identification: " << othId[selection]->getContents() << std::endl;
+    out << "Other Identification: " << othId[selection]->getContents() << std::endl;
 }

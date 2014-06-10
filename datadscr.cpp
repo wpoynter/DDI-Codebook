@@ -1,5 +1,7 @@
 #include "datadscr.h"
 
+#include "pipe.h"
+
 const std::string DDI::DataDscr::_label_ = "dataDscr";
 
 DDI::DataDscr::DataDscr(std::string _ID)
@@ -23,15 +25,35 @@ void DDI::DataDscr::readNode(rapidxml::xml_node<> *_node) {
     {
         if (node->name() == DDI::VarGrp::_label_)
         {
-            varGrp.push_back(new VarGrp(node));
+            varGrp.push_back(std::make_shared<VarGrp>(node));
         }
         else if (node->name() == DDI::Var::_label_)
         {
-            var.push_back(new Var(node));
+            var.push_back(std::make_shared<Var>(node));
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
+            out << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
+}
+
+DDI::VarGrpPtrs::iterator DDI::DataDscr::getVarGrpBegin()
+{
+    return varGrp.begin();
+}
+
+DDI::VarGrpPtrs::iterator DDI::DataDscr::getVarGrpEnd()
+{
+    return varGrp.end();
+}
+
+DDI::VarPtrs::iterator DDI::DataDscr::getVarBegin()
+{
+    return var.begin();
+}
+
+DDI::VarPtrs::iterator DDI::DataDscr::getVarEnd()
+{
+    return var.end();
 }

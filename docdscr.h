@@ -26,6 +26,8 @@ public:
     Citation* getCitation();
 };
 
+typedef std::shared_ptr<DocDscr> DocDscrPtr;
+
 }
 
 #endif // DOCDSCR_H

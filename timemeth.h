@@ -8,7 +8,7 @@ namespace DDI {
 class TimeMeth : public DDIEntity
 {
 public:
-    TimeMeth(std::string _ID);
+    TimeMeth(std::string _ID = "");
 };
 
 }

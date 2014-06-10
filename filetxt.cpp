@@ -1,5 +1,7 @@
 #include "filetxt.h"
 
+#include "pipe.h"
+
 const std::string DDI::FileTxt::_label_ = "fileTxt";
 
 DDI::FileTxt::FileTxt(std::string _ID)
@@ -35,7 +37,7 @@ void DDI::FileTxt::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
+            out << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }

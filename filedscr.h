@@ -25,6 +25,8 @@ public:
     void readNode(rapidxml::xml_node<> *_node);
 };
 
+typedef std::shared_ptr<FileDscr> FileDscrPtr;
+
 }
 
 #endif // FILEDSCR_H

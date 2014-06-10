@@ -1,13 +1,17 @@
 #include "vargrp.h"
 
+#include "pipe.h"
+
 const std::string DDI::VarGrp::_label_ = "varGrp";
 
-DDI::VarGrp::VarGrp(std::string _ID)
+DDI::VarGrp::VarGrp(std::string _ID) :
+    Referenceable()
 {
     ID = _ID;
 }
 
-DDI::VarGrp::VarGrp(rapidxml::xml_node<> *_node)
+DDI::VarGrp::VarGrp(rapidxml::xml_node<> *_node) :
+    Referenceable()
 {
     readNode(_node);
 }
@@ -27,7 +31,7 @@ void DDI::VarGrp::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
+            out << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }
@@ -47,4 +51,14 @@ bool DDI::VarGrp::readAttribute(std::string _name, std::string _value) {
         return false;
     }
     return true;
+}
+
+std::vector<DDI::Labl*>::iterator DDI::VarGrp::getLablBegin()
+{
+    return labl.begin();
+}
+
+std::vector<DDI::Labl*>::iterator DDI::VarGrp::getLablEnd()
+{
+    return labl.end();
 }

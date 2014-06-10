@@ -8,7 +8,7 @@ namespace DDI {
 class Abstract : public DDIEntity
 {
 public:
-    Abstract(std::string _ID);
+    Abstract(std::string _ID = "");
 };
 
 }

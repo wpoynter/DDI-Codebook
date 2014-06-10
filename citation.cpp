@@ -1,5 +1,7 @@
 #include "citation.h"
 
+#include "pipe.h"
+
 const std::string DDI::Citation::_label_ = "citation";
 
 
@@ -52,7 +54,7 @@ void DDI::Citation::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
+            out << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }

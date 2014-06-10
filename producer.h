@@ -12,7 +12,7 @@ private:
     std::string abbr;
     std::string affiliation;
 public:
-    Producer(std::string _ID);
+    Producer(std::string _ID = "");
     Producer(rapidxml::xml_node<> *_node);
 
     static const std::string _label_;

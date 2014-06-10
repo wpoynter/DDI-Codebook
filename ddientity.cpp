@@ -1,5 +1,7 @@
 #include "ddientity.h"
 
+#include "pipe.h"
+
 std::string DDI::DDIEntity::getID() {
     return ID;
 }
@@ -41,7 +43,9 @@ void DDI::DDIEntity::readNode(rapidxml::xml_node<> *_node) {
          attr; attr = attr->next_attribute())
     {
         if (!readAttribute(attr->name(), attr->value()))
-            std::cout << "[" << getXMLLabel() << "] Unrecognised attribute: " << attr->name() << " (" << attr->value() << ")" << std::endl;
+        {
+            out << "[" << getXMLLabel() << "] Unrecognised attribute: " << attr->name() << " (" << attr->value() << ")" << std::endl;
+        }
     }
     _contents_ = _node->value();
 }

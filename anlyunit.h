@@ -8,7 +8,7 @@ namespace DDI {
 class AnlyUnit : public DDIEntity
 {
 public:
-    AnlyUnit(std::string _ID);
+    AnlyUnit(std::string _ID = "");
 };
 
 }

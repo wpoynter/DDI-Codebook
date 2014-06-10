@@ -8,7 +8,7 @@ namespace DDI {
 class Weight : public DDIEntity
 {
 public:
-    Weight(std::string _ID);
+    Weight(std::string _ID = "");
 };
 
 }

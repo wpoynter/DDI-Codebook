@@ -1,5 +1,7 @@
 #include "serstmt.h"
 
+#include "pipe.h"
+
 const std::string DDI::SerStmt::_label_ = "serStmt";
 
 DDI::SerStmt::SerStmt(std::string _ID)
@@ -27,7 +29,7 @@ void DDI::SerStmt::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
+            out << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }

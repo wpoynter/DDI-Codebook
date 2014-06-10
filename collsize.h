@@ -8,7 +8,7 @@ namespace DDI {
 class CollSize : public DDIEntity
 {
 public:
-    CollSize(std::string _ID);
+    CollSize(std::string _ID = "");
 };
 
 }

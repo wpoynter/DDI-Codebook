@@ -8,7 +8,7 @@ namespace DDI {
 class Nation : public DDIEntity
 {
 public:
-    Nation(std::string _ID);
+    Nation(std::string _ID = "");
 };
 
 }

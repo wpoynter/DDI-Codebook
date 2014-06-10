@@ -1,5 +1,7 @@
 #include "diststmt.h"
 
+#include "pipe.h"
+
 const std::string DDI::DistStmt::_label_ = "distStmt";
 
 DDI::DistStmt::DistStmt(std::string _ID)
@@ -31,7 +33,7 @@ void DDI::DistStmt::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
+            out << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }

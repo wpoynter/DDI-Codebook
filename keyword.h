@@ -8,7 +8,7 @@ namespace DDI {
 class Keyword : public DDIEntity
 {
 public:
-    Keyword(std::string _ID);
+    Keyword(std::string _ID = "");
 };
 
 }

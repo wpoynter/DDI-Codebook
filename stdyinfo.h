@@ -20,7 +20,7 @@ private:
     std::vector<SumDscr*> sumDscr;                    //Optional
     std::vector<Notes*> notes;                        //Optional
 public:
-    StdyInfo(std::string _ID);
+    StdyInfo(std::string _ID = "");
     StdyInfo(rapidxml::xml_node<> *_node);
 
     static const std::string _label_;

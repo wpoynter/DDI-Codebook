@@ -16,7 +16,7 @@ private:
     std::vector<DataColl*> dataColl;                      //Optional
     std::vector<Notes*> notes;                            //Optional
 public:
-    Method(std::string _ID);
+    Method(std::string _ID = "");
     Method(rapidxml::xml_node<> *_node);
 
     static const std::string _label_;

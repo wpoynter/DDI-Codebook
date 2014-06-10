@@ -1,13 +1,17 @@
 #include "var.h"
 
+#include "pipe.h"
+
 const std::string DDI::Var::_label_ = "var";
 
-DDI::Var::Var(std::string _ID)
+DDI::Var::Var(std::string _ID) :
+    Referenceable()
 {
     ID = _ID;
 }
 
-DDI::Var::Var(rapidxml::xml_node<> *_node)
+DDI::Var::Var(rapidxml::xml_node<> *_node) :
+    Referenceable()
 {
     readNode(_node);
 }
@@ -75,7 +79,7 @@ void DDI::Var::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
+            out << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }

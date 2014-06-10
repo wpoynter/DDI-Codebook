@@ -1,5 +1,7 @@
 #include "othermat.h"
 
+#include "pipe.h"
+
 const std::string DDI::OtherMat::_label_ = "otherMat";
 
 DDI::OtherMat::OtherMat(std::string _ID)
@@ -43,7 +45,7 @@ void DDI::OtherMat::readNode(rapidxml::xml_node<> *_node) {
         }
         else
         {
-            std::cout << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
+            out << node->name() << " is not recogonised as a child of " << _label_ << std::endl;
         }
     }
 }

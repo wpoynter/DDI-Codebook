@@ -1,5 +1,7 @@
 #include "reader.h"
 
+#include "pipe.h"
+
 DDI::Reader::Reader(std::string _fileName, DDI::Codebook *_codebook)
 {
     prepared = false;
@@ -21,7 +23,7 @@ void DDI::Reader::clearBuffer()
 
 void DDI::Reader::prepare()
 {
-    std::cout << "Preparing...\n";
+    out << "Preparing...\n";
     stream.open(fileName.c_str(), std::ios::binary);
     stream.unsetf(std::ios::skipws);
     // Get stream size and resize buffer
@@ -35,7 +37,7 @@ void DDI::Reader::prepare()
 void DDI::Reader::read()
 {
     if (!prepared) prepare();
-    std::cout << "Reading...\n";
+    out << "Reading...\n";
     // Read data and append terminating 0
     stream.read(&buf.front(), static_cast<std::streamsize>(size));
     buf[size] = 0;
@@ -43,7 +45,7 @@ void DDI::Reader::read()
 
 void DDI::Reader::parse()
 {
-    std::cout << "Parsing...\n";
+    out << "Parsing...\n";
     doc.parse<0>(&buf.front());
     rapidxml::xml_node<> *n_codeBook = doc.first_node("codeBook");
     codebook->readNode(n_codeBook);

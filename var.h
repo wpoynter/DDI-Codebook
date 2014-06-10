@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "ddientity.h"
+#include "referenceable.h"
 #include "location.h"
 #include "labl.h"
 #include "qstn.h"
@@ -20,7 +21,7 @@
 
 namespace DDI {
 
-class Var : public DDIEntity
+class Var : public DDIEntity, public Referenceable<Var>
 {
 private:
     //Attributes
@@ -52,6 +53,8 @@ public:
     void readNode(rapidxml::xml_node<> *_node);
     bool readAttribute(std::string _name, std::string _value);
 };
+
+typedef std::shared_ptr<Var> VarPtr;
 
 }
 

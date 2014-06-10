@@ -26,7 +26,7 @@ private:
     std::vector<Universe*> universe;                  //Optional
     std::vector<DataKind*> dataKind;                  //Optional
 public:
-    SumDscr(std::string _ID);
+    SumDscr(std::string _ID = "");
 };
 
 }

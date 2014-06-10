@@ -8,7 +8,7 @@ namespace DDI {
 class DataCollector : public DDIEntity
 {
 public:
-    DataCollector(std::string _ID);
+    DataCollector(std::string _ID = "");
 };
 
 }

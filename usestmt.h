@@ -12,7 +12,7 @@ private:
     //Children
     Restrctn *restrctn;                             //Optional
 public:
-    UseStmt(std::string _ID);
+    UseStmt(std::string _ID = "");
 };
 
 }

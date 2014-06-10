@@ -14,7 +14,7 @@ private:
     CollSize *collSize;                             //Optional
     FileQnty *fileQnty;                             //Optional
 public:
-    SetAvail(std::string _ID);
+    SetAvail(std::string _ID = "");
 };
 
 }

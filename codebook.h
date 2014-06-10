@@ -12,15 +12,21 @@
 
 namespace DDI {
 
+typedef std::vector<DocDscrPtr> DocDscrPtrs;
+typedef std::vector<StdyDscrPtr> StdyDscrPtrs;
+typedef std::vector<FileDscrPtr> FileDscrPtrs;
+typedef std::vector<DataDscrPtr> DataDscrPtrs;
+typedef std::vector<OtherMatPtr> OtherMatPtrs;
+
 class Codebook : public DDIEntity
 {
 private:
     //Children
-    std::vector<DocDscr*> docDscr;                //Optional
-    std::vector<StdyDscr*> stdyDscr;              //Required
-    std::vector<FileDscr*> fileDscr;              //Optional
-    std::vector<DataDscr*> dataDscr;              //Optional
-    std::vector<OtherMat*> otherMat;              //Optional
+    DocDscrPtrs docDscr;                //Optional
+    StdyDscrPtrs stdyDscr;              //Required
+    FileDscrPtrs fileDscr;              //Optional
+    DataDscrPtrs dataDscr;              //Optional
+    OtherMatPtrs otherMat;              //Optional
 public:
     Codebook();
     Codebook(std::istream &is);
@@ -30,12 +36,15 @@ public:
     std::string getXMLLang();
     void readNode(rapidxml::xml_node<> *_node);
 
+    void linkIDs();
+
     //Test function
     void test();
 
     //Print functions
     void printStudies();
     void printStudy(int selection = 0);
+    void printVariableTree();
 };
 
 }

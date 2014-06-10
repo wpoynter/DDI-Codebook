@@ -12,6 +12,7 @@ namespace Utils {
     std::vector<const char *> explode(const char* str, const char *delim = " ");
     std::string implode(std::vector<std::string> str, std::string glue = " ");
     const char* implode(std::vector<const char*> str, const char *glue = " ");
+    std::string indent(int level, char c = '>');
 }
 
 }

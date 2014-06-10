@@ -8,7 +8,7 @@ namespace DDI {
 class TimePrd : public DDIEntity
 {
 public:
-    TimePrd(std::string _ID);
+    TimePrd(std::string _ID = "");
 };
 
 }

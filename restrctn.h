@@ -8,7 +8,7 @@ namespace DDI {
 class Restrctn : public DDIEntity
 {
 public:
-    Restrctn(std::string _ID);
+    Restrctn(std::string _ID = "");
 };
 
 }
