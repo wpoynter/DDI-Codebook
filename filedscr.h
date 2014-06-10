@@ -2,6 +2,7 @@
 #define FILEDSCR_H
 
 #include <vector>
+#include <memory>
 
 #include "ddientity.h"
 #include "filetxt.h"

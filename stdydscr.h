@@ -2,6 +2,7 @@
 #define STDYDSCR_H
 
 #include <vector>
+#include <memory>
 
 #include "ddientity.h"
 #include "citation.h"

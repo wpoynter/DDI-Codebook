@@ -2,6 +2,7 @@
 #define OTHERMAT_H
 
 #include <vector>
+#include <memory>
 
 #include "ddientity.h"
 #include "labl.h"
